@@ -15,6 +15,8 @@ public class WebConfig extends WebMvcConfigurerAdapter {
    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
    }
+
+
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         super.addViewControllers(registry);
@@ -32,6 +34,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
                 .addResourceLocations("/resources/");
     }
 
+
     @Bean
     public RequestContextListener requestContextListener() {
         return new RequestContextListener();
@@ -42,5 +45,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     public static PropertySourcesPlaceholderConfigurer placeholderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();
     }
+
 
 }
